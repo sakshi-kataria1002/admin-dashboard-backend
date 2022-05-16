@@ -8,5 +8,6 @@ const cors = require('cors')
 router.post('/signup', cors(), AuthController.signUp)
 router.post('/signin', cors(), AuthController.signIn)
 router.get('/getAllUsers', cors(), verify, AuthController.getAllUsers)
+//router.get('/getUserDetail/:id', cors(), AuthController.getParticularUser)
 
 module.exports = router

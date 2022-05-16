@@ -70,8 +70,8 @@ exports.signIn = async (req,res) =>{
         else{
             const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET)
             
-            //res.header("auth-token", token).send(token)
-            res.send("Logged in successfully")
+            res.header("auth-token", token).send(token)
+            //res.send("Logged in successfully")
         }
     } catch (error) {
         res.status(500).send(error)
